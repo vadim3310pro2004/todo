@@ -14,7 +14,10 @@ const TodoForm = (props) => {
         }
     };
     const handleInputKeyUp = event => {
-        event.code === 'Enter'? buttonHandleClick() : null;
+        // event.code === 'Enter'? buttonHandleClick() : null;
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            buttonHandleClick();
+        }
     }
     const handleInputChange = event => {
         setInputTodo(event.target.value);
@@ -22,7 +25,8 @@ const TodoForm = (props) => {
 
     return (
         <div className="todo__form">
-            <input type="text" placeholder="add todo" value={inputTodo} onChange={handleInputChange} onKeyUp={handleInputKeyUp}/>
+            <input type="text" placeholder="add todo" value={inputTodo} onChange={handleInputChange} onKeyDown={handleInputKeyUp}/>
+            {/* <input type="text" placeholder="add todo" value={inputTodo} onChange={handleInputChange} onKeyUp={handleInputKeyUp}/> */}
             <button type="button" onClick={buttonHandleClick}>add</button>
         </div>
     );
