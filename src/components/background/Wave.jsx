@@ -1,7 +1,10 @@
-const randomColor = () => `rgb(${Math.round(Math.random()*155+100)}, ${Math.round(Math.random()*155+100)}, ${Math.round(Math.random()*155+100)})`;
 
-const Wave = () => (
-    <div className="wave" style={{borderColor: randomColor()}}></div>
-)
+const Wave = (props) => {
+    const { color } = props;
+    // console.log(color)
+    return (
+        <div className="wave" style={{borderColor: color}}></div>
+    );
+}
 
 export default Wave;

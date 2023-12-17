@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const randomColor = () => `rgb(${Math.round(Math.random()*155+100)}, ${Math.round(Math.random()*155+100)}, ${Math.round(Math.random()*155+100)})`;
+
 const TodoForm = (props) => {
     const [inputTodo, setInputTodo] = useState('');
     const addTodo = props.onAdd;
@@ -8,7 +10,7 @@ const TodoForm = (props) => {
         if (inputTodo.trim() != '') {
             addTodo(inputTodo);
             setInputTodo('');
-            addWave();
+            addWave(randomColor());
         }
     };
     const handleInputKeyUp = event => {

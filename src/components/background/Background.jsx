@@ -3,10 +3,9 @@ import Wave from "./Wave";
 
 const Background = props => {
     const { waves } = props;
-    const wavesArray = new Array(waves).fill();
     return (
         <>
-        {wavesArray.map((item, id) => ( <Wave key={id} /> ))}
+        {waves.map((item, id) => ( <Wave key={id} color={item} /> ))}
         <div className="chebur-logo">
             <img src="imgs/clown.jpg" alt="cat clown" />
         </div>
