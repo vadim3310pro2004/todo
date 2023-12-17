@@ -1,0 +1,46 @@
+$size: 300px;
+.chebur-logo {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+
+    img {
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 100px #ffffff50;
+    }
+}
+
+.wave{
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+
+    border: 6px solid black;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    animation: wave-animation 10s linear infinite;
+    width: $size + $size/10;
+    height: $size + $size/10;
+}
+
+@keyframes wave-animation {
+    0% {
+        scale: 1;
+    }
+    100% {
+        // width: calc((100vmin + 100vmax)/2);
+        // height: calc((100vmin + 100vmax)/2);
+        scale: 2.5;
+        opacity: 0;
+    }
+}
