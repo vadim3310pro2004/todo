@@ -1,6 +1,5 @@
 
 const BurgerButton = (props) => {
-
     const { onClick } = props;
 
     return (

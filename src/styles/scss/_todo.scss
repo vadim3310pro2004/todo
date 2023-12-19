@@ -35,6 +35,10 @@
         background-color: #444;
         color: #bbb;
         font-size: 16px;
+
+        &:hover {
+            background-color: #555;
+        }
     }
 
     button {
@@ -42,17 +46,13 @@
         margin-left: 5px;
 
         &:active {
-            background-color: #555;
+            background-color: #666;
         }
     }
 
     input {
         width: 1px;
         flex-grow: 1;
-
-        &:focus {
-            outline: 1px solid wheat;
-        }
     }
 }
 

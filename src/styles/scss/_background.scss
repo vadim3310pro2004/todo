@@ -1,6 +1,6 @@
 $size: 300px;
 
-.chebur-logo {
+.background-image-wrapper {
     position: absolute;
     z-index: -1;
     left: 50%;
@@ -14,8 +14,7 @@ $size: 300px;
     img {
         height: 100%;
         border-radius: 50%;
-        // box-shadow: 0 0 100px #ffaaaa90;
-        transition: box-shadow 2s;
+        transition: box-shadow 1s;
     }
 }
 

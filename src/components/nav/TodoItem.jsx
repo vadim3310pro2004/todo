@@ -1,6 +1,6 @@
 
-const TodoItem = (props) => {
-    const {text, onRemove, id} = props;
+const TodoItem = props => {
+    const { text, onRemove, id } = props;
     const closeHundleClick = event => onRemove(id);
 
     return (
